@@ -20,7 +20,7 @@ const Authenticated = () => {
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen
           name="Home"
-          component={PickupDetails}
+          component={BottomTabNavigator}
           options={{ headerShown: false }}
         />
         <Stack.Screen

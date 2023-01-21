@@ -9,6 +9,7 @@ import {
   MaterialIcons,
   MaterialCommunityIcons,
   EvilIcons,
+  AntDesign
 } from "react-native-vector-icons";
 import Home from "../screens/home/Home";
 import History from "../screens/History";
@@ -35,7 +36,7 @@ function BottomTabNavigator() {
         component={Home}
         options={{
           tabBarIcon: ({ color }) => (
-            <Feather name="home" color={color} size={30} />
+            <Feather name="home" color={color} size={24} />
           ),
           tabBarButton: (props) => (
             <CustomTabBarButton route="Home" {...props} />
@@ -48,9 +49,9 @@ function BottomTabNavigator() {
         component={Contracts}
         options={{
           tabBarIcon: ({ color }) => (
-            <MaterialIcons name="redeem" color={color} size={30} />
+            <AntDesign name='filetext1' color={color} size={24} />
           ),
-        //   tabBarButton: (props) => <CustomTabBarButton {...props} route="Rewards" />
+          tabBarButton: (props) => <CustomTabBarButton {...props} route="Rewards" />
         }}
       />
 
@@ -59,9 +60,9 @@ function BottomTabNavigator() {
         component={History}
         options={{
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="history" color={color} size={30} />
+            <MaterialCommunityIcons name="history" color={color} size={25} />
           ),
-        //   tabBarButton: (props) => <CustomTabBarButton {...props} route="History" />
+          tabBarButton: (props) => <CustomTabBarButton {...props} route="History" />
         }}
       />
 
@@ -72,7 +73,7 @@ function BottomTabNavigator() {
           tabBarIcon: ({ color }) => (
             <EvilIcons name="user" color={color} size={34} />
           ),
-        //   tabBarButton: (props) => <CustomTabBarButton {...props} route="Profile" />
+          tabBarButton: (props) => <CustomTabBarButton {...props} route="Profile" />
         }}
       />
     </Tab.Navigator>

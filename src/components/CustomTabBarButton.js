@@ -1,12 +1,12 @@
 import React from "react";
 import { StyleSheet, View, TouchableOpacity } from "react-native";
 import Svg, { Path } from "react-native-svg";
-import { SemiBold,Text } from "../layout/Text";
+import { SemiBold, Text } from "../layout/Text";
 import { colors } from "../styles/color";
 
 const CustomTabBarButton = (props) => {
   const { route, children, accessibilityState, onPress } = props;
-  
+
   if (accessibilityState.selected) {
     return (
       <View style={styles.btnWrapper}>
@@ -41,7 +41,7 @@ const CustomTabBarButton = (props) => {
         >
           {children}
         </TouchableOpacity>
-        <Text style={{position:"absolute" ,bottom:8 ,color:colors.primary}}>{route}</Text>
+        <Text style={styles.labelStyle}>{route}</Text>
       </View>
     );
   } else {
@@ -58,7 +58,6 @@ const CustomTabBarButton = (props) => {
         ]}
       >
         {children}
-        
       </TouchableOpacity>
     );
   }
@@ -69,7 +68,7 @@ export default CustomTabBarButton;
 const styles = StyleSheet.create({
   btnWrapper: {
     flex: 1,
-    alignItems: "center",
+    alignItems: "center"
   },
   activeBtn: {
     flex: 1,
@@ -81,7 +80,10 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-    paddingTop: 5
+    paddingTop: 5,
+
+    borderColor: "#f1f1f1",
+    borderWidth: 1.3
   },
   inactiveBtn: {
     flex: 1,
@@ -93,5 +95,12 @@ const styles = StyleSheet.create({
   svgGapFiller: {
     flex: 1,
     backgroundColor: "#fff"
+  },
+  labelStyle: {
+    position: "absolute",
+    bottom: 8,
+    color: colors.primary,
+    fontSize: 15,
+    fontWeight: "700"
   }
 });

@@ -182,9 +182,9 @@ export const style = {
   },
   screen: {
     height: "100%",
-    paddingHorizontal: 15,
+    paddingHorizontal: 10,
     backgroundColor: "#fff",
-    paddingVertical: 15,
+    paddingVertical: 10,
   },
   start: {
     alignItems: "flex-start",

@@ -75,7 +75,6 @@ const styles = StyleSheet.create({
     marginHorizontal: 14,
   },
   SinglePickup: {
-    marginHorizontal: 7,
     marginVertical: 4,
     backgroundColor: "#ffffff",
     borderRadius: 7,
@@ -86,5 +85,8 @@ const styles = StyleSheet.create({
       width: 0,
       height: 4,
     },
+    borderWidth:1,
+    borderColor:"#f2f2f2",
+    
   },
 });
